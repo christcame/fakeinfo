@@ -1,6 +1,7 @@
 //mport react and react dom lib
 import React from 'react';
 import ReactDom from 'react-dom';
+import faker from 'faker';
 
 import CommentDetails from './CommentDetails';
  import ApprovalCard from './ApprovalCard'
@@ -10,13 +11,13 @@ const App=function(){
     return (
     <div className="ui container comments">
     <ApprovalCard>
-    <CommentDetails author="Sam" timeAgo="Today at 6:35 AM"/>
+    <CommentDetails author={faker.name.findName()} timeAgo="Today at 6:35 AM"/>
     </ApprovalCard>
     <ApprovalCard>
-    <CommentDetails author="Alex" timeAgo="Today at 4:10 PM"/>
+    <CommentDetails author={faker.name.findName()} timeAgo="Today at 4:10 PM"/>
     </ApprovalCard>
     <ApprovalCard>
-    <CommentDetails author="Jane" timeAgo="Yesterday at 9:00 PM"/>
+    <CommentDetails author={faker.name.findName()} timeAgo="Yesterday at 9:00 PM"/>
     </ApprovalCard>
     </div>
     );
